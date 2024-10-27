@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIZA - Virtual Therapist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ELIZA - Virtual Therapist</h1>
+            <p>Welcome! I'm ELIZA, a virtual therapist based on Joseph Weizenbaum's famous program from 1966. 
+               I use pattern matching to engage in conversation, reflecting your statements back to you.
+               While I'm not a real therapist, I'm happy to listen and respond to your thoughts.</p>
+        </header>
 
+        <main>
+            <div id="chat-history"></div>
+            
+            <form id="chat-form" onsubmit="return handleUserInput(event)">
+                <input type="text" 
+                       id="user-input" 
+                       placeholder="Type your message here..."
+                       autocomplete="off"
+                       required>
+                <button type="submit">Send</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>Note: This is a demonstration project. ELIZA is not a substitute for professional mental health care.</p>
+        </footer>
+    </div>
+    <script src="eliza.js"></script>
+</body>
+</html>
