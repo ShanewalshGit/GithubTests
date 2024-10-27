@@ -3,39 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Index</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        .container {
-            text-align: center;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        a {
-            text-decoration: none;
-            color: #3498db;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>ELIZA - Virtual Therapist</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Simple Page</h1>
-        <p>This is a basic HTML page template.</p>
-        <p>Feel free to <a href="#">click here</a> to learn more!</p>
+        <header>
+            <h1>ELIZA - Virtual Therapist</h1>
+            <p>Welcome! I'm ELIZA, a virtual therapist based on Joseph Weizenbaum's famous program from 1966. 
+               I use pattern matching to engage in conversation, reflecting your statements back to you.
+               While I'm not a real therapist, I'm happy to listen and respond to your thoughts.</p>
+        </header>
+
+        <main>
+            <div id="chat-history"></div>
+            
+            <form id="chat-form" onsubmit="return handleUserInput(event)">
+                <input type="text" 
+                       id="user-input" 
+                       placeholder="Type your message here..."
+                       autocomplete="off"
+                       required>
+                <button type="submit">Send</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>Note: This is a demonstration project. ELIZA is not a substitute for professional mental health care.</p>
+        </footer>
     </div>
+    <script src="eliza.js"></script>
 </body>
 </html>
